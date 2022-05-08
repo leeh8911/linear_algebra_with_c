@@ -11,15 +11,9 @@ project(LINEAR_ALGEBRA_WITH_CPP)
 # Set library output path to /lib
 set(LIBRARY_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/lib")
 
-# Add the pugixml and GoogleTest library subdirectories
-add_subdirectory(thirdparty/googletest)
-
 # Add project executable
-add_executable(LINEAR_ALGEBRA_WITH_CPP test/TestCode.cpp)
+add_executable(LINEAR_ALGEBRA_WITH_CPP src/SampleMain.cpp)
 
-target_link_libraries(LINEAR_ALGEBRA_WITH_CPP 
-    gtest_main 
-)
 
 # Set options for Linux or Microsoft Visual C++
 # if( ${CMAKE_SYSTEM_NAME} MATCHES "Linux" )
