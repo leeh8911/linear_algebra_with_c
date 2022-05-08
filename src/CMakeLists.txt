@@ -1,0 +1,2 @@
+add_library(LINEAR_ALGEBRA_WITH_CPP SHARED
+matrix/LAWC_Matrix.cpp)
