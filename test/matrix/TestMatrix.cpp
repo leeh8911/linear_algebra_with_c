@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/matrix/LAWC_Matrix.hpp"
+#include "LAWC_World.hpp"
 
 TEST(SampleTest, Test_1){
     EXPECT_TRUE(true);

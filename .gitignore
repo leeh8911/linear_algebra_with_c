@@ -1,6 +1,7 @@
-/build/*
-/.vscode/*
-*/.vs/*
+build/*
+.vscode/*
+.vs/*
+
 # Prerequisites
 *.d
 

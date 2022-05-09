@@ -10,10 +10,10 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 enable_testing()
 
-add_executable(
-  Test
-  test/matrix/TestMatrix.cpp
-)
+file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+
+add_executable(Test ${SRC_FILES})
+
 target_link_libraries(
   Test PUBLIC
   LINEAR_ALGEBRA_WITH_CPP
@@ -21,8 +21,7 @@ target_link_libraries(
 )
 
 target_include_directories(Test PUBLIC
-"${PROJECT_BINARY_DIR}"
-"${PROHECT_SOURCE_DIR}/src")
+"${CMAKE_SOURCE_DIR}/includes")
 
 include(GoogleTest)
 gtest_discover_tests(Test)
